@@ -19,7 +19,7 @@ a sample command line arguments.
 
     ./DES.exe plain_text.txt encrypted_text.txt --encrypt 0010110010
 
-## Explaination & Arithmetic
+## Explanation & Arithmetic
 
 The program contains mainly two parts:
 The fist part is the sub keys generator. The generator first permutate 

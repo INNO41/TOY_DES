@@ -310,7 +310,11 @@ int main(int argc, char * argv[]){
       	unsigned char c2 = static_cast<unsigned char>(i);
       	output_file << c2;
       }
-    } 
+    } else {
+      std::cerr << "ERROR: Invalid command line arguments!" << std::endl;
+  	  std::cout << "Usage: 1.plain_text_file 2.output_file 3.encrypt or decrypt command 4.key(10 binary numbers)" << std::endl;
+  	  return 1;
+    }
 
     // --decrypt argument
     if (std::string(argv[3]) == "--decrypt") {
@@ -323,6 +327,10 @@ int main(int argc, char * argv[]){
         unsigned char c2 = static_cast<unsigned char>(i);
         output_file << c2;
       }
+    } else {
+      std::cerr << "ERROR: Invalid command line arguments!" << std::endl;
+  	  std::cout << "Usage: 1.plain_text_file 2.output_file 3.encrypt or decrypt command 4.key(10 binary numbers)" << std::endl;
+      return 1;
     }
   }
   return 0;
